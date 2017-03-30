@@ -1,6 +1,6 @@
 FROM php:5.6-fpm
 
-MAINTAINER Andrey Barashkov <sokolby@gmail.com>
+MAINTAINER Alexander Dunin <a@dunin.by>
 
 RUN apt-get update
 
