@@ -1,6 +1,6 @@
 FROM php:5.6-fpm
 
-MAINTAINER Alexander Dunin <a@dunin.by>
+MAINTAINER Andrey Barashkov <sokolby@gmail.com>
 
 RUN apt-get update
 
@@ -35,8 +35,8 @@ RUN docker-php-ext-install \
     zip \
     xsl \
     xmlrpc
-    
-RUN usermod -u 1000 www-data    
+
+RUN usermod -u 1000 www-data
 
 COPY ./conf/php.ini /usr/local/etc/php/php.ini
 COPY ./conf/php.conf /usr/local/etc/php-fpm.d/php.conf
