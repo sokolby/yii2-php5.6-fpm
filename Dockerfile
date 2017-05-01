@@ -62,6 +62,3 @@ RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
     && mv drush /usr/local/bin
 
 RUN drush dl registry_rebuild-7.x
-
-# Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
