@@ -42,15 +42,7 @@ RUN usermod -u 1000 www-data
 COPY ./conf/php.ini /usr/local/etc/php/php.ini
 COPY ./conf/php.conf /usr/local/etc/php-fpm.d/php.conf
 
-# Add crontab file in the cron directory
-ADD crontab /etc/cron.d/hello-cron
-
-# Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/hello-cron
-
-# Create the log file to be able to run tail
-RUN touch /var/log/cron.log
-
+ADD crontab /var/spool/cron/crontabs/root
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
