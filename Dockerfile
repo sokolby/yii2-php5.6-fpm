@@ -50,12 +50,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');" \
     && mv composer.phar /usr/local/bin/composer
 
-RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
-    && chmod +x drush \
-    && mv drush /usr/local/bin
-
-RUN drush dl registry_rebuild-7.x
-
 RUN cron
 
 ENV TERM xterm
