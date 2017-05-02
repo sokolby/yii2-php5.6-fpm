@@ -16,7 +16,6 @@ RUN apt-get install -y \
     geoip-database \
     libgeoip-dev \
     php5-geoip \
-    php5-intl \
     nano \
     mysql-client \
     cron
