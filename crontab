@@ -1,1 +1,1 @@
-*/1 * * * * curl --request GET 'http://rastishka-new.stage.by/testcrontab'
+*/1 * * * * curl --request GET 'http://rastishka-new.stage.by/testcrontab' >> /var/www/html/cron.log 2>&1
