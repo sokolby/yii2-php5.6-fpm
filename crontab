@@ -1,1 +1,2 @@
-*/1 * * * * curl --request GET 'http://rastishka-new.stage.by/testcrontab' >> /var/www/html/cron.log 2>&1
+*/60 * * * * curl --request GET 'http://shop.rastishka.by/testcrontab' >> /var/www/html/cron.log 2>&1
+*/60 * * * * curl --request GET 'http://shop.rastishka.by/api_receipt_status' >> /var/www/html/cron.log 2>&1
